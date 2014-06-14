@@ -56,7 +56,7 @@ class Pagamento
      *
      * @ORM\Column(name="reference", type="string", length=200, nullable=true)
      *
-     * @Assert\MaxLength(200)
+     * @Assert\Length(max = "200")
      * @Assert\NotBlank()
      */
     private $reference;
@@ -74,7 +74,7 @@ class Pagamento
      *
      * @Assert\NotBlank()
      * @Assert\Email()
-     * @Assert\MaxLength(60)
+     * @Assert\Length(max = "60")
      */
     private $email;
 
@@ -88,7 +88,7 @@ class Pagamento
      *
      * @var string $token
      *
-     * @Assert\MaxLength(32)
+     * @Assert\Length(max = "32")
      * @Assert\MinLength(limit=32)
      * @Assert\NotBlank()
      */
@@ -104,7 +104,7 @@ class Pagamento
      *
      * @ORM\Column(name="retorno_token", type="string", length=32, nullable=true)
      *
-     * @Assert\MaxLength(32)
+     * @Assert\Length(max = "32")
      * @Assert\MinLength(limit=32)
      */
     private $retornoToken;
@@ -152,7 +152,7 @@ class Pagamento
      * @ORM\Column(name="senderEmail", type="string", length=60, nullable=true)
      *
      * @Assert\Email()
-     * @Assert\MaxLength(60)
+     * @Assert\Length(max = "60")
      */
     private $senderEmail;
 
@@ -168,7 +168,7 @@ class Pagamento
      *
      * @ORM\Column(name="senderName", type="string", length=50, nullable=true)
      *
-     * @Assert\MaxLength(50)
+     * @Assert\Length(max = "50")
      * @Assert\Regex(pattern="/^.*(?=.*\s)(?=.*[a-zA-Z]).*$/", message="O nome tem que conter um espaço, caracterizando o nome completo..")
      */
     private $senderName;
@@ -270,7 +270,7 @@ class Pagamento
      *
      * @ORM\Column(name="shippingAddressState", type="string", length=2, nullable=true)
      *
-     * @Assert\MaxLength(2)
+     * @Assert\Length(max = "2")
      * @Assert\MinLength(limit=2)
      */
     private $shippingAddressState;
@@ -287,7 +287,7 @@ class Pagamento
      *
      * @ORM\Column(name="shippingAddressCity", type="string", length=80, nullable=true)
      *
-     * @Assert\MaxLength(80)
+     * @Assert\Length(max = "80")
      */
     private $shippingAddressCity;
 
@@ -319,7 +319,7 @@ class Pagamento
      *
      * @ORM\Column(name="shippingAddressDistrict", type="string", length=80, nullable=true)
      *
-     * @Assert\MaxLength(80)
+     * @Assert\Length(max = "80")
      */
     private $shippingAddressDistrict;
 
@@ -335,7 +335,7 @@ class Pagamento
      *
      * @ORM\Column(name="shippingAddressStreet", type="string", length=120, nullable=true)
      *
-     * @Assert\MaxLength(120)
+     * @Assert\Length(max = "120")
      */
     private $shippingAddressStreet;
 
@@ -351,7 +351,7 @@ class Pagamento
      *
      * @ORM\Column(name="shippingAddressNumber", type="string", length=10, nullable=true)
      *
-     * @Assert\MaxLength(10)
+     * @Assert\Length(max = "10")
      */
     private $shippingAddressNumber;
 
@@ -367,7 +367,7 @@ class Pagamento
      *
      * @ORM\Column(name="shippingAddressComplement", type="string", length=120, nullable=true)
      *
-     * @Assert\MaxLength(120)
+     * @Assert\Length(max = "120")
      */
     private $shippingAddressComplement;
 
@@ -397,7 +397,7 @@ class Pagamento
      *
      * @ORM\Column(name="redirectURL", type="string", length=1000, nullable=true)
      *
-     * @Assert\MaxLength(100)
+     * @Assert\Length(max = "100")
      * @Assert\Url()
      */
     private $redirectURL;
